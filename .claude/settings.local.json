@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node *)",
+      "Bash(npm ls *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\sepie\\\\balaqai\\\\src\" -Recurse -Depth 2)",
+      "Bash(Select-Object FullName)",
+      "Bash(npx tsc *)",
+      "Bash(Select-String -Pattern \"page\\\\.tsx|layout\\\\.tsx|Header\\\\.tsx\")",
+      "Bash(npm run *)",
+      "Bash(npm install *)",
+      "Bash(taskkill *)",
+      "PowerShell(Stop-Process *)",
+      "Bash(timeout 2)",
+      "WebFetch(domain:localhost)",
+      "Bash(curl -s http://localhost:3000)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -TimeoutSec 5 -UseBasicParsing; Write-Output \"Status: $\\($r.StatusCode\\)\"; Write-Output \"Content-Length: $\\($r.Content.Length\\)\"; Write-Output \"First 500 chars: $\\($r.Content.Substring\\(0, [Math]::Min\\(500, $r.Content.Length\\)\\)\\)\" } catch { Write-Output \"Error: $_\" })",
+      "Bash(curl *)",
+      "PowerShell(Get-Process *)",
+      "PowerShell(Get-NetTCPConnection *)",
+      "PowerShell(try { $response = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 10; Write-Host \"Status: $\\($response.StatusCode\\)\" -ForegroundColor Green; Write-Host \"Content-Length: $\\($response.Content.Length\\)\" } catch { Write-Host \"Error details: $_\" -ForegroundColor Red })",
+      "PowerShell(Start-Sleep -Seconds 1; Start-Process -NoNewWindow -FilePath \"npx.cmd\" -ArgumentList \"next dev --webpack\" -WorkingDirectory \"C:\\\\Users\\\\sepie\\\\balaqai\" -RedirectStandardOutput \"C:\\\\Users\\\\sepie\\\\balaqai\\\\.next\\\\dev\\\\server.log\" -RedirectStandardError \"C:\\\\Users\\\\sepie\\\\balaqai\\\\.next\\\\dev\\\\server.err\"; Start-Sleep -Seconds 5; Write-Output \"Server started\")",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 10; Write-Host \"SUCCESS! Status: $\\($r.StatusCode\\) Size: $\\($r.Content.Length\\)\" -ForegroundColor Green } catch { Write-Host \"Failed: $_\" -ForegroundColor Red })",
+      "Bash(npx next *)"
+    ]
+  }
+}

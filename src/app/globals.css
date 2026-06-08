@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Brand colors - soft pastel palette */
+  --color-balaqai-primary: #0EA5E9;
+  --color-balaqai-secondary: #0F172A;
+  --color-balaqai-accent: #F59E0B;
+  --color-balaqai-success: #22C55E;
+  --color-balaqai-warning: #F97316;
+  --color-balaqai-background: #F8FAFC;
+
+  /* Pastel accents */
+  --color-pastel-pink: #FDF2F8;
+  --color-pastel-rose: #FFE4E6;
+  --color-pastel-coral: #FFD4C4;
+  --color-pastel-blue: #E0F2FE;
+  --color-pastel-sky: #F0F9FF;
+  --color-pastel-lavender: #F3E8FF;
+  --color-pastel-violet: #EDE9FE;
+  --color-pastel-yellow: #FEF3C7;
+  --color-pastel-amber: #FFFBEB;
+  --color-pastel-mint: #D1FAE5;
+  --color-pastel-green: #ECFDF5;
+  --color-pastel-peach: #FEF2F2;
+
+  /* Text */
+  --color-text-primary: #475569;
+  --color-text-secondary: #64748B;
+  --color-text-heading: #1E293B;
+
+  --font-sans: var(--font-nunito);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: var(--color-text-heading);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Floating animation for hero badges */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.animate-float:nth-child(3) {
+  animation-delay: 2s;
+}
