@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const NAV_LINKS = [
-  { label: "Все секции", href: "/catalog" },
+  { label: "Все секции", href: "/sections" },
   { label: "Цены", href: "/pricing" },
   { label: "Отзывы", href: "/#testimonials" },
   { label: "Для партнеров", href: "/partner" },
