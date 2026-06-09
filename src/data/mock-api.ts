@@ -4,9 +4,9 @@ import { generateReviews } from './generators/generateReviews';
 import { DISTRICTS } from './generators/generateDistricts';
 import { Activity, Provider, Review, Booking, Parent, ActivityFilters } from '@/types';
 
-let activities = generateActivities(100);
-let providers = generateProviders(50);
-let reviews = generateReviews(100);
+const activities = generateActivities(100);
+const providers = generateProviders(50);
+const reviews = generateReviews(100);
 
 export const api = {
   activities: {
@@ -25,6 +25,20 @@ export const api = {
       }
       if (filters?.rating) {
         result = result.filter((a) => a.rating >= filters.rating!);
+      }
+      if (filters?.priceMin !== undefined) {
+        result = result.filter((a) => a.price >= filters.priceMin!);
+      }
+      if (filters?.priceMax !== undefined) {
+        result = result.filter((a) => a.price <= filters.priceMax!);
+      }
+      if (filters?.search) {
+        const q = filters.search.toLowerCase();
+        result = result.filter(
+          (a) =>
+            a.title.toLowerCase().includes(q) ||
+            a.description.toLowerCase().includes(q)
+        );
       }
       
       return result;

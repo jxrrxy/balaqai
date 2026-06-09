@@ -103,6 +103,9 @@ export interface ActivityFilters {
   age?: number;
   district?: string;
   rating?: number;
+  search?: string;
+  priceMin?: number;
+  priceMax?: number;
 }
 
 export interface Visit {
