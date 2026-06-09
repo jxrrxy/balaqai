@@ -502,7 +502,7 @@ export default function Home() {
                     <span className="text-xs text-slate-400">в месяц</span>
                   </div>
                   <div className="text-2xl font-extrabold text-slate-800 mb-1">
-                    25 000 ₸
+                    80 000 ₸
                   </div>
                   <div className="flex items-center gap-1 text-xs text-emerald-500 font-semibold">
                     <CheckCircle2 className="w-3 h-3" />
