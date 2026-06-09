@@ -378,8 +378,7 @@ export default function Home() {
 
             <p className="text-base md:text-lg lg:text-xl text-slate-600 leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0">
               Плавание, гимнастика, танцы, единоборства и еще десятки занятий для
-              вашего ребенка в одной карте. Первая неделя —{" "}
-              <span className="font-bold text-sky-500">бесплатно</span>.
+              вашего ребенка в одной карте.
             </p>
 
             {/* CTA Buttons */}
@@ -683,47 +682,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════ */}
-      {/* 6. CTA / ПРЕДЛОЖЕНИЕ */}
-      {/* ════════════════════════════════════════════════ */}
-      <section className="max-w-7xl mx-auto px-4 md:px-6 my-16 md:my-24">
-        <div
-          className="relative rounded-[2.5rem] px-8 md:px-16 py-12 md:py-16 overflow-hidden text-center"
-          style={{
-            background: "linear-gradient(135deg, #38BDF8 0%, #0EA5E9 100%)",
-          }}
-        >
-          {/* Decorative elements */}
-          <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
-          <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-sky-300/20 rounded-full blur-2xl" />
-          <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-blue-300/20 rounded-full blur-xl" />
-
-          <div className="relative">
-            <div className="text-4xl mb-4">🌟</div>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-3">
-              Первая неделя — бесплатно
-            </h2>
-            <p className="text-base text-white/80 max-w-md mx-auto mb-8">
-              Попробуйте любой абонемент бесплатно в течение 7 дней. Никаких
-              скрытых платежей и комиссий.
-            </p>
-            <Button
-              className="rounded-2xl px-10 py-4 text-base font-bold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-              style={{
-                background: "white",
-                color: "#0EA5E9",
-                border: "none",
-              }}
-            >
-              Начать бесплатно
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
-            <p className="text-xs text-white/60 mt-4">
-              Без привязки карты. Отмена в любой момент.
-            </p>
           </div>
-        </div>
-      </section>
-    </div>
   );
 }
