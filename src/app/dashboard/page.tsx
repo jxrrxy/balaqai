@@ -1,33 +1,43 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import { useAuthStore } from '@/lib/stores/useAuthStore';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { AvatarUploader } from '@/components/PhotoUploader';
-import { Calendar, Heart, User, CreditCard, History, LogOut, Camera } from 'lucide-react';
+import { Calendar, Heart, User, CreditCard, History, LogOut } from 'lucide-react';
 
 const AVATAR_STORAGE_KEY = 'balaqai-avatar';
 
 export default function DashboardPage() {
   const { user, logout } = useAuthStore();
   const [avatar, setAvatar] = useState<string | undefined>(undefined);
+  const [mounted, setMounted] = useState(false);
 
-  // Load saved avatar from localStorage
+  // Load avatar from localStorage only on client after mount
   useEffect(() => {
-    const saved = localStorage.getItem(AVATAR_STORAGE_KEY);
-    if (saved) setAvatar(saved);
+    setMounted(true);
+    try {
+      const saved = localStorage.getItem(AVATAR_STORAGE_KEY);
+      if (saved) setAvatar(saved);
+    } catch {
+      // localStorage not available
+    }
   }, []);
 
-  const handleAvatarChange = (dataUrl: string) => {
+  const handleAvatarChange = useCallback((dataUrl: string) => {
     setAvatar(dataUrl || undefined);
-    if (dataUrl) {
-      localStorage.setItem(AVATAR_STORAGE_KEY, dataUrl);
-    } else {
-      localStorage.removeItem(AVATAR_STORAGE_KEY);
+    try {
+      if (dataUrl) {
+        localStorage.setItem(AVATAR_STORAGE_KEY, dataUrl);
+      } else {
+        localStorage.removeItem(AVATAR_STORAGE_KEY);
+      }
+    } catch {
+      // localStorage not available
     }
-  };
+  }, []);
 
   const menuItems = [
     { href: '/dashboard/profile', icon: User, title: 'Профиль', desc: 'Личные данные' },
@@ -42,11 +52,13 @@ export default function DashboardPage() {
     <div className="container mx-auto px-4 py-6 sm:py-8">
       {/* User greeting with avatar */}
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 mb-6 sm:mb-8">
-        <AvatarUploader
-          currentAvatar={avatar}
-          onChange={handleAvatarChange}
-          size={80}
-        />
+        {mounted && (
+          <AvatarUploader
+            currentAvatar={avatar}
+            onChange={handleAvatarChange}
+            size={80}
+          />
+        )}
         <div className="text-center sm:text-left">
           <h1 className="text-xl sm:text-2xl font-bold text-balaqai-secondary mb-1">
             Добро пожаловать, {user?.name?.split(' ')[0] || 'Родитель'}!

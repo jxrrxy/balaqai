@@ -11,7 +11,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-balaqai-primary rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg">БQ</span>
+                <span className="text-white font-bold text-lg">BQ</span>
               </div>
               <span className="font-bold text-xl">BalaQai</span>
             </div>

@@ -332,15 +332,7 @@ export default function SectionsPage() {
                     </div>
 
                     {/* CTA Button */}
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm font-bold text-slate-800">
-                        {new Intl.NumberFormat("ru-RU", {
-                          style: "currency",
-                          currency: "KZT",
-                          minimumFractionDigits: 0,
-                        }).format(activity.price * 1000)}{" "}
-                        / мес
-                      </span>
+                    <div className="flex items-center justify-end">
                       <span className="inline-flex items-center gap-1 text-sm font-semibold text-sky-500 group-hover:gap-2 transition-all">
                         Подробнее
                         <ChevronRight className="w-4 h-4" />

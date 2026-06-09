@@ -5,10 +5,10 @@ import { Check } from 'lucide-react';
 
 export default function PricingPage() {
   const plans = [
-    { visits: 12, price: 12000, popular: false, color: 'border-slate-200' },
-    { visits: 20, price: 18000, popular: true, color: 'border-balaqai-primary' },
-    { visits: 36, price: 32000, popular: false, color: 'border-slate-200' },
-    { visits: 60, price: 49000, popular: false, color: 'border-slate-200' },
+    { visits: 12, price: 50000, popular: false, color: 'border-slate-200' },
+    { visits: 20, price: 80000, popular: true, color: 'border-balaqai-primary' },
+    { visits: 36, price: 142000, popular: false, color: 'border-slate-200' },
+    { visits: 60, price: 230000, popular: false, color: 'border-slate-200' },
   ];
 
   return (

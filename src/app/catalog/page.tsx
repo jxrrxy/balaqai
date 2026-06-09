@@ -292,10 +292,7 @@ function CatalogContent() {
                         {activity.title}
                       </h3>
                       <p className="text-xs sm:text-sm text-slate-500 mb-2">{activity.location.district}</p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-balaqai-primary font-medium text-sm sm:text-base">
-                          {formatPrice(activity.price * 1000)} / месяц
-                        </span>
+                      <div className="flex items-center justify-end">
                         <span className="text-xs sm:text-sm text-slate-500">{activity.ageMin}-{activity.ageMax} лет</span>
                       </div>
                     </div>
