@@ -23,7 +23,7 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Для родителей</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/catalog" className="text-slate-300 hover:text-white transition-colors">Каталог занятий</Link></li>
+              <li><Link href="/sections" className="text-slate-300 hover:text-white transition-colors">Каталог занятий</Link></li>
               <li><Link href="/pricing" className="text-slate-300 hover:text-white transition-colors">Тарифы</Link></li>
               <li><Link href="/dashboard" className="text-slate-300 hover:text-white transition-colors">Личный кабинет</Link></li>
             </ul>

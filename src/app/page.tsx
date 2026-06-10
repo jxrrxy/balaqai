@@ -394,7 +394,7 @@ export default function Home() {
                 Получить скидку
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
-              <Link href="/catalog">
+              <Link href="/sections">
                 <Button
                   variant="outline"
                   className="rounded-2xl px-8 py-4 text-base font-semibold border-2 border-white bg-white/70 backdrop-blur-sm text-slate-700 hover:bg-white hover:shadow-lg transition-all duration-300"
@@ -514,7 +514,7 @@ export default function Home() {
                 <div className="bg-white/60 rounded-2xl p-4 backdrop-blur-sm">
                   <div className="space-y-2">
                     {[
-                      { dist: "₽ район Сарыарка", mins: "12 мин" },
+                      { dist: "Район Сарыарка", mins: "12 мин" },
                       { dist: "Район Алматы", mins: "15 мин" },
                       { dist: "Район Есиль", mins: "10 мин" },
                     ].map((item, j) => (
@@ -556,7 +556,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {CATEGORY_CARDS.map((cat, i) => (
-              <Link key={i} href="/catalog" className="group">
+              <Link key={i} href="/sections" className="group">
                 <div
                   className={`bg-gradient-to-br ${cat.gradient} rounded-[32px] p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
                 >
