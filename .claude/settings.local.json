@@ -21,7 +21,9 @@
       "PowerShell(try { $response = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 10; Write-Host \"Status: $\\($response.StatusCode\\)\" -ForegroundColor Green; Write-Host \"Content-Length: $\\($response.Content.Length\\)\" } catch { Write-Host \"Error details: $_\" -ForegroundColor Red })",
       "PowerShell(Start-Sleep -Seconds 1; Start-Process -NoNewWindow -FilePath \"npx.cmd\" -ArgumentList \"next dev --webpack\" -WorkingDirectory \"C:\\\\Users\\\\sepie\\\\balaqai\" -RedirectStandardOutput \"C:\\\\Users\\\\sepie\\\\balaqai\\\\.next\\\\dev\\\\server.log\" -RedirectStandardError \"C:\\\\Users\\\\sepie\\\\balaqai\\\\.next\\\\dev\\\\server.err\"; Start-Sleep -Seconds 5; Write-Output \"Server started\")",
       "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 10; Write-Host \"SUCCESS! Status: $\\($r.StatusCode\\) Size: $\\($r.Content.Length\\)\" -ForegroundColor Green } catch { Write-Host \"Failed: $_\" -ForegroundColor Red })",
-      "Bash(npx next *)"
+      "Bash(npx next *)",
+      "WebSearch",
+      "WebFetch(domain:images.unsplash.com)"
     ]
   }
 }
