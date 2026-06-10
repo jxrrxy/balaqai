@@ -51,8 +51,8 @@ const CATEGORY_CARDS = [
     gradient: "from-blue-50 to-cyan-50",
     icon: "⚽",
     images: [
-      "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80",
-      "https://images.unsplash.com/photo-1461896836934-bd45ba8fcf9b?w=400&q=80",
+      "/спортивная лекция1.jpg",
+      "/спортивная лекция2.jpg",
     ],
     color: "text-blue-500",
     bgIcon: "bg-blue-100",
@@ -63,7 +63,8 @@ const CATEGORY_CARDS = [
     gradient: "from-teal-50 to-emerald-50",
     icon: "🏊",
     images: [
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&q=80",
+      "/водные виды спорта1.jpeg",
+      "/водные виды спорта2.jpeg",
     ],
     color: "text-teal-500",
     bgIcon: "bg-teal-100",
@@ -74,8 +75,8 @@ const CATEGORY_CARDS = [
     gradient: "from-sky-50 to-indigo-50",
     icon: "💃",
     images: [
-      "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=80",
-      "https://images.unsplash.com/photo-1603912699214-92627f304eb6?w=400&q=80",
+      "/танцы и гимнастика1.jpg",
+      "/танцы и гимнастика2.jpg",
     ],
     color: "text-sky-500",
     bgIcon: "bg-sky-100",
